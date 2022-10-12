@@ -6,10 +6,9 @@ class FlowEx9_1 {
 	public static void main(String[] args) { 
 		
 		int sum=0;
-		
-		for(int i=1;  i<=15;  i+=2)
+		for(int i=100 ;  i<=10;i++  ) {
 			sum += i;
-		
-		System.out.println("1~10까지 합은  " + sum);
+		}
+		System.out.println("for :"  + sum);
 	} 
 }
