@@ -7,13 +7,16 @@ class FlowEx1 {
 
 		System.out.printf("x=%d 일때, 참인 것은%n", x);
 
-		if(true) 		System.out.println("x==0");
+		if(x==0) 		
+			System.out.println("x==0");
 		
-		if(false) System.out.println("x!=0");
+		if(0 != 0) System.out.println("x!=0");
 		
-		if(false) System.out.println("!(x==0)");
+		if(!(x==0)) {
+			System.out.println("!(x==0)");
+		}
 		
-		if(true) {
+		if(!(x != 0)) {
 			System.out.println("!(x!=0)");
 			System.out.println("if문 테스트중..........");
 		}
@@ -22,13 +25,13 @@ class FlowEx1 {
 		x = 1;
 		System.out.printf("x=%d 일때, 참인 것은%n", x);
 
-		if(false) 
+		if(x==0) 
 			System.out.println("x==0");
 		
 		
-		if(true) System.out.println("x!=0");
-		if(true) System.out.println("!(x==0)");
-		if(false) System.out.println("!(x!=0)");
+		if(x!=0) System.out.println("x!=0");
+		if(!(x==0)) System.out.println("!(x==0)");
+		if(!(x!=0)) System.out.println("!(x!=0)");
 		
 	}
 }

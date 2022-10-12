@@ -8,9 +8,9 @@ public class FlowEx2_6 {
 		
 		Scanner sc = new Scanner(System.in);
 				
-	    String num = sc.nextLine();
+	    String str = sc.nextLine();
 	    
-	    switch(num){
+	    switch(str){
 	    case "aaa":
 	    	System.out.println("aaa번 입력");
 	    	break;

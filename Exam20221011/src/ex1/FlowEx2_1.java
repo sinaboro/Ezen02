@@ -3,7 +3,7 @@ package ex1;
 import java.util.Scanner;
 
 /* 점수따른 학점 출력 
- * 90 : A,   80 : B,       70 : C, 60: D, F 
+ * 90 : A,   80 : B, 70 : C, 60: D,  F 
   */
 public class FlowEx2_1 {
 

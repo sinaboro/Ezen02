@@ -10,8 +10,9 @@ public class FlowEx7 {
 		
 		System.out.println("가위(1), 바위(2), 보(3) 중 입력 > ");
 		int user = sc.nextInt();
-		int com = (int)(Math.random()*3)+1;
-		
+		double d = Math.random();
+		int com = (int)(d * 3)+1;
+	
 		switch(user-com) {
 		case 2: case -1:
 			System.out.println("com 승리");
@@ -22,7 +23,7 @@ public class FlowEx7 {
 		case 0:
 			System.out.println("비김");
 		}
-		System.out.println("user : " + user + ", com" + com);
+		System.out.println("user : " + user + ", com : " + com + ", " + d);
 	}
 
 }

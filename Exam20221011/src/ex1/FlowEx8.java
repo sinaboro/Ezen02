@@ -1,28 +1,30 @@
 package ex1;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class FlowEx8 {
+class FlowEx8 {
+	public static void main(String[] args) { 
+		char gender;
+		String regNo = "";
 
-	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("가위(1), 바위(2), 보(3) 중 입력 > ");
-		int user = sc.nextInt();
-		int com = (int)(Math.random()*3)+1;
-		
-		switch(user-com) {
-		case 2: case -1:
-			System.out.println("com 승리");
-			break;
-		case 1: case  -2:
-			System.out.println("user 승리");
-			break;
-		case 0:
-			System.out.println("비김");
+		System.out.print("당신의 주민번호를 입력하세요.(011231-1111222)>");
+
+		Scanner scanner = new Scanner(System.in);
+		regNo = scanner.nextLine();
+
+		gender = regNo.charAt(7); // 입력받은 번호의 8번째 문자를 gender에 저장
+                    
+		switch(gender) {
+			case '1':
+			case '3':
+				System.out.println("당신은 남자입니다.");
+				break;
+			case '2':
+			case '4':
+				System.out.println("당신은 여자입니다.");
+				break;
+			default:
+				System.out.println("유효하지 않은 주민등록번호입니다.");;
 		}
-		System.out.println("user : " + user + ", com" + com);
-	}
-
+	} // main의 끝
 }

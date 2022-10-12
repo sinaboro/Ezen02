@@ -17,10 +17,12 @@ public class FlowEx2_2 {
 			System.out.println("학점 A");
 		else	if(num >= 80 && num < 90)
 				System.out.println("학점 B");
-		else	if(num >= 70)
+		else	if(num >= 70 && num < 80)
 				System.out.println("학점 C");
-		else	if(num >= 60)
+		else	if(num >= 60 && num < 70)
 				System.out.println("학점 D");
+		else if(num>100)
+				System.out.println("0~100 사이 입력가능!!");
 		else
 				System.out.println("학점 F");
 	}
