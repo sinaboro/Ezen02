@@ -5,7 +5,7 @@ public class FlowEx30 {
 	public static void main(String[] args) {
 		
 		int sum=0;
-		int i = 0;
+		int i = 0;   // 1~ 14 
 		
 		while(true) {
 			if(sum > 100)
@@ -13,6 +13,7 @@ public class FlowEx30 {
 			++i;
 			sum +=i;
 		}
+		
 		System.out.println("i = " + i);
 		System.out.println("sum = " + sum);
 	}
