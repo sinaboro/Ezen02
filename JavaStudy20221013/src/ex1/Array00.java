@@ -13,8 +13,8 @@ public class Array00 {
 		int tmp=0;
 		int j = 0;
 		for(int i=0; i<6; i++) {
-			j = (int)(Math.random()*45);
-			tmp = ball[i];
+			j = (int)(Math.random()*45);  //30
+			tmp = ball[i];  //tmp(1)
 			ball[i] = ball[j];
 			ball[j] = tmp;
 		}
@@ -23,4 +23,10 @@ public class Array00 {
 			System.out.printf("ball[%d]= %d\n",i, ball[i]);
 	}
 
+	
+	
+	
+	
+	
+	
 }
