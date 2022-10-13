@@ -4,7 +4,7 @@ public class ArrayEx1 {
 
 	public static void main(String[] args) {
 		
-		int[] score = new int[] {50,60,70,80,90};
+		int[] score=  {50,60,70,80,90};
 		int k = 1;
 
 
