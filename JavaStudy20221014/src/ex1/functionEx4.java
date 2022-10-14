@@ -20,9 +20,6 @@ public class functionEx4 {
 		System.out.println("main함수 종료!!!");
 	}
 	
-	//     void(자리)는 반환타입을 결정, func1는 함수이름(변수 명명규칙과 동일)
-	// void는 반환타입이 없다. 즉 return 하지 않는다.
-	//                                                 매개변수
 	static void 매개변수만있는함수(int number) {
 		System.out.println("함수 : " + number*2);
 	}

@@ -3,8 +3,7 @@ package ex1;
 import java.util.Scanner;
 
 /*
- * 매개변수X(입력), 반환O(출력)
- * 함수 --> 원형, 정의, 호출(c언에서 구분..)
+ * 매개변수X(입력), 반환O(출력)  --> 함수 입장에서 본 때 
  */
 public class functionEx2 {
 
