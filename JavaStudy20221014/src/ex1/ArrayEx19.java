@@ -41,5 +41,8 @@ public class ArrayEx19 {
 		System.out.println("=============================");
 		System.out.printf("총점:%5d %6d %6d %6d %8.1f%n", 
 				korTotal, engTotal, mathTotal,total, total/3.0 );
+		
+		
+		
 	}
 }

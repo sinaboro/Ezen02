@@ -4,7 +4,6 @@ public class ClassEx1 {
 
 	public static void main(String[] args) {
 		
-		int num ;
 		
 		Sung 백수민 = new Sung("백수민", 96,95,99);
 		백수민.총점();
@@ -16,6 +15,16 @@ public class ClassEx1 {
 		황규성.총점();
 		황규성.평균();
 		황규성.show();
+		
+		Sung 이상호 = new Sung("이상호", 10,20,45);
+		이상호.총점();
+		이상호.평균();
+		이상호.show();
+		
+		Sung 임채리 = new Sung("임채리", 11,22,33);
+		임채리.총점();
+		임채리.평균();
+		임채리.show();
 	}
 
 }
