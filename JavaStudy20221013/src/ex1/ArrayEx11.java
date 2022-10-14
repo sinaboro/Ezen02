@@ -16,7 +16,7 @@ public class ArrayEx11 {
 		System.out.println("----------------------");
 		
 		String str2 = "abcdef";
-		String tmp = str2.substring(0, 5);
+		String tmp = str2.substring(2, 4);  //2부터 4전까지
 		
 		System.out.println(tmp);
 		System.out.println(tmp.length());

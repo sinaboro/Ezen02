@@ -12,8 +12,8 @@ public class Array00 {
 		
 		int tmp=0;
 		int j = 0;
-		for(int i=0; i<6; i++) {
-			j = (int)(Math.random()*45);  //30
+		for(int i=0; i<6; i++) {//i -> 0,1,2,3,4,5,6(탈출)
+			j = (int)(Math.random()*45);  //0~44  7
 			tmp = ball[i];  //tmp(1)
 			ball[i] = ball[j];
 			ball[j] = tmp;

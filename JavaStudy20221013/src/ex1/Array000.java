@@ -8,7 +8,7 @@ public class Array000 {
 		
 		//배열 저장(random 이용.. 1~100사이)
 		for(int i=0; i<num.length; i++)
-			num[i] = (int)(Math.random()*100) + 1;
+			num[i] = (int)(Math.random()*100) + 1;  //1~100
 		
 		//배열 출력
 		for(int i=0; i<num.length; i++)
@@ -20,7 +20,7 @@ public class Array000 {
 		
 		System.out.print("\n총합 : " + sum);
 		System.out.print(",  \t평균 : " + (double)sum/num.length);
-		
+		//                                                   (double)정수형--> 실수형으로 변경
 		//최대값 , 최소값 출력
 		int max = num[0];
 		int min = num[0];
@@ -36,7 +36,7 @@ public class Array000 {
 			System.out.print(num[i] + ", ");
 		System.out.println("\n----------------------");
 	
-		//작은순서에서 큰순서대로 정렬 (오름차순)
+		//작은순서에서 큰순서대로 정렬 (오름차순)--버블정렬
 		for(int i=0; i<num.length-2; i++) {
 			for(int j=0; j<num.length-1; j++) {
 				//for(int j=0; j<num.length-1-i; j++) {
