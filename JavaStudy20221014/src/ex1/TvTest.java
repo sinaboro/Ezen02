@@ -8,7 +8,7 @@ public class TvTest {
 		t.channelDown();       // Tv인스턴스의 메서드 channelDown()을 호출한다. 
 		System.out.println("현재 채널은 " + t.channel + " 입니다."); 
 		
-		Tv tmp = new Tv();
+		Tv tmp = new Tv() ;
 		tmp.channel = 100;
 		tmp.channelUp();
 		System.out.println(tmp.channel);
