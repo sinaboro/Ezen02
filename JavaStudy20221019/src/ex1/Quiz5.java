@@ -13,9 +13,12 @@ public class Quiz5 {
 		int index1, index2;
 		index1 = index2= 0;
 		
+		
+		//40칸 1~40 저장
 		for(int i=0; i<number.length; i++)
 			number[i] = i+1;
 		
+		//배열 40개 썩기...
 		for(int i=0; i<number.length; i++) {
 			int index =  (int)(Math.random()*40);
 			int tmp = number[i];
@@ -28,6 +31,7 @@ public class Quiz5 {
 		}
 		System.out.println("\n---------------------------------");
 		
+		//짝수, 홀수 분리해서 배열 저장
 		for(int i=0; i<number.length; i++) {
 			if(number[i] % 2 == 0 )
 				odd[index1++] = number[i];
@@ -35,8 +39,11 @@ public class Quiz5 {
 				even[index2++] = number[i];
 		}
 		
+		//짝수에서 0을 제외한 입력데이타만 odd2 저장
 		int[] odd2 = new int[index1];
 		System.arraycopy(odd, 0, odd2, 0, index1);
+
+		//홀수에서 0을 제외한 입력데이타만 even2 저장
 		int[] even2 = new int[index2];
 		System.arraycopy(even, 0, even2, 0, index2);
 		
@@ -57,7 +64,40 @@ public class Quiz5 {
 			System.out.print(even2[i] + ", ");
 		}
 		
+		System.out.println("\n내림차순 정렬--------------------");
 		//내림차순 정렬
+		for(int i=0; i<odd2.length; i++) {
+			for(int j=i;  j< odd2.length; j++) {
+				if(odd2[i] < odd2[j]) {
+					int tmp = odd2[i];
+					odd2[i]= odd2[j];
+					odd2[j] =tmp;
+				}
+			}
+		}
+		System.out.println("------------------------");
+		System.out.println();
+		for(int i=0; i<odd2.length; i++)
+			System.out.print( odd2[i] + ", ");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
