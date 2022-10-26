@@ -34,10 +34,10 @@ public class PolymorphismEx01 {
 		
 		Student s = new Student();
 		
-		s =  new WorkStudent();
+		//s =  new WorkStudent();
 		//s = new Person(); 하위클래스가 상위클래스 참조불가
 		
-		s = (Student)p;
+		s = (WorkStudent)p;
 		s.study();
 		s.eat();
 		
