@@ -36,4 +36,18 @@ class FireEngine extends Car {	// 소방차
 	void water() {		// 물을 뿌리는 기능
 		System.out.println("water!!!");
 	}
+	void stop() {
+		System.out.println("오버라이딩 했음.!!!!");
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
