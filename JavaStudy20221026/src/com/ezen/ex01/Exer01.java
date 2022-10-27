@@ -28,8 +28,9 @@ package com.ezen.ex01;
 public class Exer01 {
 
 	public static void main(String[] args) {
-		//Student s  = new Student() ;
 		WorkStudent w = new WorkStudent();
+		
+		Person p = (Person)w;
 	}
 }
 
