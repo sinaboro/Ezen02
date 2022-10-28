@@ -1,5 +1,8 @@
 package com.ezen.ex01;
-                                       //MakerInterface
+
+import com.ezen.ex02.Point;
+
+//MakerInterface
 class Point  implements Cloneable{
 	 int xPos;
 	 int yPos;
