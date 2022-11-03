@@ -27,7 +27,7 @@ public class FruitEx01 {
 //		aBox.set(new Apple());
 //		System.out.println(aBox.get());
 		aBox.set("Apple");      //new Apple()
-		bBox.set("Orange");  //new Orange()
+		bBox.set(new Orange());  //new Orange()
 	
 		System.out.println(aBox.get());
 		System.out.println(bBox.get());

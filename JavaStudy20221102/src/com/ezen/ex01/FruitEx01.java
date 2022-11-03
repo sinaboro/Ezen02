@@ -13,48 +13,34 @@ class Orange{
 	}
 }
 
-class Box{
-	private Object ob;
-	public void set(Object a) { ob = a ; }
-	public Object get() { return ob; }
+class AppleBox{
+	private Apple  ap;
+	public void set(Apple a) {
+		ap = a ;
+	}
+	public Apple get() { return ap; }
+}
+
+class OrangeBox{
+	private Orange or ;
+	public void set(Orange o) { or = o ; }
+	public Orange get() { return or; }
 }
 
 public class FruitEx01 {
 
 	public static void main(String[] args) {
-		Box aBox = new Box();
-		Box bBox = new Box();
+		
+		AppleBox aBox = new AppleBox();
+		OrangeBox oBox = new OrangeBox();
+		
 		
 		aBox.set(new Apple());
-		bBox.set(new Orange());
+		oBox.set(new Orange());
 		
-		Apple a  = (Apple)aBox.get();
-		Orange b = (Orange)bBox.get(); //ob를 b에게 전달
-		
+		Apple a = aBox.get();
+	    Orange b= oBox.get();
+	    System.out.println(a);
 	}
-
-//	class Person {}
-//	class Student extends Person {}
-//	class WorkStudent extends Student{}
-//	
-//	Person p = new Student();
-//	
-//	Person p2 = new Person();
-//	
-//	Student s = (Student)p;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

@@ -25,11 +25,11 @@ public class FruitEx01 {
 		Box aBox = new Box();
 		Box bBox = new Box();
 		
-		aBox.set("Apple");      //new Apple()
+		aBox.set("Apple");      //set( new Apple())
 		bBox.set("Orange");  //new Orange()
 		Apple a = (Apple)aBox.get();
 		//String  a  = (String)aBox.get();
-		Orange b = (Orange)bBox.get(); //ob를 b에게 전달
+		//Orange b = (Orange)bBox.get(); //ob를 b에게 전달
 		
 	}
 }
