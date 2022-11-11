@@ -26,7 +26,7 @@ public class DBMemberEx01 {
 			
 			stmt = conn.createStatement();
 			
-			String sql = "insert into member values('0009', '한무', 170, 58, 55)";
+			String sql = "insert into member values('0012', '한무', 170, 58, 55)";
 			
 			int num = stmt.executeUpdate(sql);
 			System.out.println("insert 성공  :  " + num);
@@ -41,9 +41,11 @@ public class DBMemberEx01 {
 				System.out.print(rs.getInt("weight") + "\t");
 				System.out.print(rs.getInt("age") + "\t");
 				System.out.println();
-				
 			}
 			
+			String sql3 = "update member set name = '윤재문'  where id = '0004' ";
+			int num2 = stmt.executeUpdate(sql3);
+			System.out.println("update 성공  :  " + num2);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
