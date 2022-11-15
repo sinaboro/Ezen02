@@ -1,6 +1,8 @@
 package com.ezen.ex01;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -9,18 +11,38 @@ import org.jsoup.select.Elements;
 
 public class CrawlingEx04 {
 
+	List<SeoulHotelVO> list = new ArrayList<SeoulHotelVO>();
+	
 	public static void main(String[] args) throws IOException {
 			
 		CrawlingEx04 craw =  new CrawlingEx04();
 		craw.seoulHotel();
+		craw.seoulHotelShow();
+	}
+	
+	public void seoulHotelShow() {
+		System.out.println("--------------------------------");
+		for( SeoulHotelVO sh : list) {
+			System.out.println("번호 :  " + sh.getNo());
+			System.out.println("호델명 :  " + sh.gethotelName());
+			System.out.println("리뷰수 :  " + sh.getReviewCnt());
+			System.out.println("리뷰평점 :  " + sh.getGradeCnt());
+			System.out.println("주소  :  " + sh.getSeoulAddress());
+			System.out.println("--------------------------------");
+		}
 		
 	}
 	
 	public void seoulHotel(){
+		int no;  //번호
+		String hotelName; //호텔명
+		int reviewCnt; //리뷰수
+		double gradeCnt; //리뷰평점
+		String SeoulAddress;  //주소
 		
 		try {
 			int k=1;
-			for(int i=1; i<=32; i++) {
+			for(int i=1; i<=3; i++) {
 				Document doc=Jsoup.connect("https://korean.visitseoul.net/hotels?curPage="+i).get();
 				Elements poster=doc.select("ul.article-list li.item div.thumb img"); // 썸네일 이미지
 				Elements link=doc.select("ul.article-list li.item a"); // 썸네일장소 세부설명 링크
@@ -47,7 +69,13 @@ public class CrawlingEx04 {
 		                   System.out.println("리뷰 평점 : " + (score4.get(0).attr("alt")).split(":")[1]);
 						   //                                                     ---------------------
 		                   //                                                          평점:4.5
-		                   //                                                         (평점:4.5).split(":") ==> 평점  4.5
+		                   //             	                   (평점:4.5).split(":") ==> 평점  4.5
+		                   //SeoulHotelVO --> 저장
+		                   no = k;
+		                   hotelName = title.get(j).text();
+		                   reviewCnt = Integer.parseInt(score3.split(" ")[0]) ; //문자를 정수형 변환
+		                   gradeCnt = Double.parseDouble( score4.get(0).attr("alt").split(":")[1] );
+		                   
 						   String simg="";
 						   for(int m=0;m<images.size();m++)
 						   {
@@ -63,6 +91,18 @@ public class CrawlingEx04 {
 						   
 						   System.out.println();
 						   k++;
+						 //SeoulHotelVO --> 주소 저장
+						   SeoulAddress = address.text();
+						   SeoulHotelVO se = new SeoulHotelVO();
+						   
+						   se.setNo(no);
+						   se.sethotelName(hotelName);
+						   se.setReviewCnt(reviewCnt);
+						   se.setGradeCnt(gradeCnt);
+						   se.setSeoulAddress(SeoulAddress);
+						   
+						   list.add(se);
+						   
 					}catch(Exception e){
 						e.printStackTrace();
 					}

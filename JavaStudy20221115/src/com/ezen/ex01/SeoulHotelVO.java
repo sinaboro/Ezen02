@@ -1,45 +1,53 @@
 package com.ezen.ex01;
 
 public class SeoulHotelVO {
-   private int no;
-   private String name,address,poster,images;
-   private double score;
-   
-	public String getImages() {
-	return images;
-	}
-	public void setImages(String images) {
-		this.images = images;
-	}
+	private int no;  //번호
+	private String hotelName; //호텔명
+	private int reviewCnt; //리뷰수
+	private double gradeCnt; //리뷰평점
+	private String SeoulAddress;  //주소
+	
+	public SeoulHotelVO() { }
+
 	public int getNo() {
 		return no;
 	}
+
 	public void setNo(int no) {
 		this.no = no;
 	}
-	public String getName() {
-		return name;
+
+	public String gethotelName() {
+		return hotelName;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void sethotelName(String name) {
+		this.hotelName = name;
 	}
-	public String getAddress() {
-		return address;
+
+	public int getReviewCnt() {
+		return reviewCnt;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+
+	public void setReviewCnt(int reviewCnt) {
+		this.reviewCnt = reviewCnt;
 	}
-	public String getPoster() {
-		return poster;
+
+	public double getGradeCnt() {
+		return gradeCnt;
 	}
-	public void setPoster(String poster) {
-		this.poster = poster;
+
+	public void setGradeCnt(double gradeCnt) {
+		this.gradeCnt = gradeCnt;
 	}
-	public double getScore() {
-		return score;
+
+	public String getSeoulAddress() {
+		return SeoulAddress;
 	}
-	public void setScore(double score) {
-		this.score = score;
+
+	public void setSeoulAddress(String seoulAddress) {
+		SeoulAddress = seoulAddress;
 	}
-   
+	
+	
 }
