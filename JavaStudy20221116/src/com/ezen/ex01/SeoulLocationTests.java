@@ -19,7 +19,7 @@ public class SeoulLocationTests {
 		se.seoulLocation();
 //		se.seoulNature();
 		
-		se.seoulLocationShow();
+//		se.seoulLocationShow();
 	}
 	
 	public void seoulLocationShow() {
@@ -38,12 +38,11 @@ public class SeoulLocationTests {
 	
 	public void seoulLocation() {
 		
-		
-		
+		DataDAO dao = DataDAO.newInstance();
 		try
 		{
 			int k=1;
-			for(int i=1;i<=1;i++)
+			for(int i=1;i<=36;i++)
 			{
 			   Document doc=Jsoup.connect("https://korean.visitseoul.net/attractions?curPage="+i).get(); //명소 목록 페이지
 			   Elements poster=doc.select("ul.article-list li.item div.thumb"); //썸네일 이미지
@@ -83,7 +82,8 @@ public class SeoulLocationTests {
 					   sl.setPhone(telInfo.text()); //전화번호
 					   sl.setTaffic(traffic); //교통 정보
 					   
-					   list.add(sl);
+					   //list.add(sl);
+					   dao.seoulLocationInsert(sl);
 					   
 					   
 					   k++;

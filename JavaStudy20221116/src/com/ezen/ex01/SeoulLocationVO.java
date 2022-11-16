@@ -1,5 +1,16 @@
 package com.ezen.ex01;
 
+/*
+create table SeoulLcation(
+	    no NUMBER(4) PRIMARY key,
+	    title NVARCHAR2(20),
+	    titleInfo NVARCHAR2(200),
+	    address NVARCHAR2(50),
+	    phone NVARCHAR2(20),
+	    info NVARCHAR2(100),
+	    taffic NVARCHAR2(200)
+	);
+*/
 public class SeoulLocationVO {
 	
 	private int no;
