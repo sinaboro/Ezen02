@@ -1,6 +1,7 @@
 package com.ezen.ex01;
 
 public class SeoulHotelVO {
+	
 	private int no;  //번호
 	private String hotelName; //호텔명
 	private int reviewCnt; //리뷰수

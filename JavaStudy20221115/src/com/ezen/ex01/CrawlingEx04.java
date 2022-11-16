@@ -17,11 +17,13 @@ public class CrawlingEx04 {
 			
 		CrawlingEx04 craw =  new CrawlingEx04();
 		craw.seoulHotel();
+		
 		craw.seoulHotelShow();
 	}
 	
 	public void seoulHotelShow() {
 		System.out.println("--------------------------------");
+		
 		for( SeoulHotelVO sh : list) {
 			System.out.println("번호 :  " + sh.getNo());
 			System.out.println("호델명 :  " + sh.gethotelName());
