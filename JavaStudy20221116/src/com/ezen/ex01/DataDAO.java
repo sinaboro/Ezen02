@@ -19,7 +19,6 @@ public class DataDAO {
 	private DataDAO() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("-------Class.forName-----------");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
