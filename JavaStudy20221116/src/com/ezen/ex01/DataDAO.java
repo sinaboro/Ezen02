@@ -16,7 +16,7 @@ public class DataDAO {
 	private final String user = "scott";
 	private final String pwd  = "1234";
 	
-	private DataDAO() {
+	private DataDAO() {  //싱글톤으로 구현
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (ClassNotFoundException e) {
